@@ -1,0 +1,25 @@
+{
+  "name": "electronjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build:msi": "build_installer.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . dnk --overwrite --asar=false --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=DNK --version-string.FileDescription=CE --version-string.ProductName=\"DNK Launcher\"",
+    "package-linux": "electron-packager . dnk --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.3",
+    "electron-packager": "^14.2.1",
+    "electron-wix-msi": "^2.2.0"
+  },
+  "dependencies": {
+    "chrome-finder": "^1.0.7",
+    "node-powershell": "^4.0.0"
+  }
+}

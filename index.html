@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
+  <title>DNK</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="block" onclick="meet()">
+      <img class="meet" src="./css/img/meet.svg" alt="google-meet-logo" />
+      <div class="text">
+        <h3>Meets</h3>
+      </div>
+    </div>
+
+    <div class="block" onclick="rdp()">
+      <img class="rdp" src="./css/img/rdp.svg" alt="rdp-logo" />
+      <div class="text">
+        <h3>Werkplek</h3>
+      </div>
+    </div>
+
+    <div class="block" onclick="outlook()">
+      <img class="outlook" src="./css/img/outlook.svg" alt="outlook-logo" />
+      <div class="text">
+        <h3>Werkmail</h3>
+      </div>
+    </div>
+
+    <div class="block" onclick="shutdown()">
+      <img class="shutdown" src="./css/img/shutdown.svg" alt="shutdown-logo" />
+      <div class="text">
+        <h3>Afsluiten</h3>
+      </div>
+    </div>
+
+    <div class="block block--firstrun hidden">
+      <div class="loader"></div>
+      <div class="text">
+        <h3>Chrome ophalen...</h3>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/rdp.js"></script>
+
+</html>
